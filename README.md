@@ -28,3 +28,13 @@ curl http://localhost:8080/albums/{ID} \
     --header "Content-Type: application/json" \
     --request "GET"
 ```
+
+### List Albums
+
+To list all albums
+
+```
+curl http://localhost:8080/albums \
+    --header "Content-Type: application/json" \
+    --request "GET"
+```

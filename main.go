@@ -25,6 +25,7 @@ func main() {
 	router := gin.Default()
 	router.GET("/health", healthcheck)
 	router.GET("/albums/:id", getAlbumByID)
+	router.GET("/albums", listAlbums)
 
 	router.Run("localhost:8080")
 }
@@ -48,4 +49,9 @@ func getAlbumByID(c *gin.Context) {
 		}
 	}
 	c.IndentedJSON(http.StatusNotFound, gin.H{"message": "album not found"})
+}
+
+// listAlbums responds with the list of all albums
+func listAlbums(c *gin.Context) {
+	c.IndentedJSON(http.StatusOK, albums)
 }
