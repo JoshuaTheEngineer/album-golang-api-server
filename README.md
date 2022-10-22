@@ -57,3 +57,15 @@ curl http://localhost:8080/albums --include \
 `{ARTIST}` should be replaced with the album artist
 
 `{PRICE}` should be replaced with the album price in format _XX.XX_
+
+### Delete an Album
+
+To delete an album
+
+```
+curl http://localhost:8080/albums/{ID} \
+    --header "Content-Type: application/json" \
+    --request "DELETE"
+```
+
+`{ID}` should be replaced with the album id
