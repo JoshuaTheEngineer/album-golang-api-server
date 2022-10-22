@@ -16,3 +16,15 @@ To run a healthcheck
 ```
 curl http://localhost:8080/health
 ```
+
+### Get Album by ID
+
+To get an album by ID
+
+`{ID}` should be replaced with the album id
+
+```
+curl http://localhost:8080/albums/{ID} \
+    --header "Content-Type: application/json" \
+    --request "GET"
+```
